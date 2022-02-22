@@ -1,15 +1,15 @@
-#include<iostream>
-
+#include <stdio.h>
+#include <stdlib.h>
 #include "Frame.h"
+#include "Snake.h"
+#include "Food.h"
+#include "Game.h"
 
-using namespace std;
 int main(){
-        Frame frame;
-
-        while(!gameover){
-                frame.draw();
-        }
-
-        return 0;
+	Game start;
+	while(start.gameover != false){
+		start.draw();
+	}	
+	return 0;
 }
 
