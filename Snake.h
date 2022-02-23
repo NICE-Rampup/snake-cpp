@@ -1,7 +1,8 @@
 #include <stdio.h>
-#include "Game.h"
 
-class Snake : public Game {
+class Game;
+
+class Snake{
 private:
 	int position_snakeHead_X;
 	int position_snakeHead_Y;
@@ -9,14 +10,11 @@ private:
 	Direction direction = STOP;
 	char symbol_head = 'o';
 public:
-	Snake(){
-		set_snakeHead();
-	}
-	void set_snakeHead(){
+	void set_snakeHead(int height, int width, char ** screen){
 		if( direction == STOP ){
 			position_snakeHead_X = width / 2 ;
 			position_snakeHead_Y = height / 2 ;
 		}
 		screen[position_snakeHead_X][position_snakeHead_Y] = symbol_head ;
-}
+	}
 };

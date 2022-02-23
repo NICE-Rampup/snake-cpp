@@ -1,17 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Game.h"
 
-class Food : public Game {
+class Game;
+
+class Food{
 private:
 	int position_foodX;
 	int position_foodY;
 	char symbol = '*';
 public:
-	Food(){
-		spawn_food();
-	}
-	void spawn_food(){
+	void spawn_food(int height, int width, char ** screen){
 		position_foodX = rand() % width;
 		position_foodY = rand() % height;
 

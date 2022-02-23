@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Frame.h"
-#include "Snake.h"
-#include "Food.h"
+#include <unistd.h>
 #include "Game.h"
+#define _5sec 5000
 
 int main(){
 	Game start;
-	while(start.gameover != false){
+	while( start.gameover == false ){
 		start.draw();
+		usleep(_5sec);
 	}	
 	return 0;
 }
