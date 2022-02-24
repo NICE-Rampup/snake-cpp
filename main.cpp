@@ -6,10 +6,11 @@
 
 int main(){
 	Game start;
-	while( start.gameover == false ){
+	while( start.get_gameover() == false ){
 		start.draw();
 		usleep(_5sec);
-	}	
+	}
+	printf(".....GAMEOVER.....\n\nYour Score is %d", start.get_score());	
 	return 0;
 }
 

@@ -1,6 +1,3 @@
-#ifndef Included_NameModel_H
-#define Included_NameModel_H
-
 #include<iostream>
 #include "Frame.h"
 #include "Snake.h"
@@ -11,8 +8,9 @@ private:
 	int height = 20 ;
 	int width = 20 ;
 	char ** screen;
-public:
 	bool gameover = false;
+	int score = 0;
+public:
 	Game(){
 		screen = new char * [height];
 		for (int itr_height = 0; itr_height < height; itr_height++) {
@@ -24,6 +22,7 @@ public:
 		frame.set_frame(height, width, screen);
 		food.spawn_food(height, width, screen);
 		snake.set_snakeHead(height, width, screen);
+		snake.set_snakeTail(height, width, screen);
 	}
 	void draw(){
 		system("clear");
@@ -34,6 +33,14 @@ public:
 			printf("\n");
 		}
 	}
+	bool get_gameover(){
+		return gameover;
+	}
+	void increase_score(){
+		score += 5;
+	}
+	int get_score(){
+		return score;
+	}
 };
 
-#endif
