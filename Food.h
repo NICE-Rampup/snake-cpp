@@ -14,5 +14,5 @@ public:
 		position_foodY = rand() % height;
 
 		screen[position_foodX][position_foodY] = symbol ;
-	}
+	}	
 };

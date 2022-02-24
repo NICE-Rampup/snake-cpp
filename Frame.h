@@ -29,6 +29,10 @@ public:
 		}
 		for( int itr_width = 0 ; itr_width < width ; itr_width ++){
 			screen[itr_width][itr_height] = symbol_wall ;
+<<<<<<< Updated upstream
 		}
+=======
+		}	
+>>>>>>> Stashed changes
 	}
 };
