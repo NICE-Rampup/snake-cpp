@@ -6,6 +6,8 @@ Game::Game(){
 	for (int itr_height = 0; itr_height < height; itr_height++) {
 	    screen[itr_height] = new char[width];
 	}
+
+	
 	Frame frame;
 	Food food;
 	Snake snake;
