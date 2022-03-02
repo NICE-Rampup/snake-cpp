@@ -6,7 +6,7 @@ class Frame{
 public:
 	void set_frame(int height, int width, char **screen);
 private:
-	char symbol_wall = '#' ;
-	char symbol_empty = ' ';
+	const char symbol_wall = '#' ;
+	const char symbol_empty = ' ';
 };
 #endif

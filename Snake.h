@@ -21,7 +21,7 @@ private:
 	int snake_length;
 	enum Direction { STOP = 0, UP, DOWN, RIGHT, LEFT};
 	Direction direction = STOP;
-	char symbol_head = 'o';
-	char symbol_tail = 'o';
+	const char symbol_head = 'o';
+	const char symbol_tail = 'o';
 };
 #endif

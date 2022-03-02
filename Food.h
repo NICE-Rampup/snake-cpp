@@ -10,6 +10,6 @@ public:
 private:
 	int position_foodX;
 	int position_foodY;
-	char symbol = '*';
+	const char symbol = '*';
 };
 #endif

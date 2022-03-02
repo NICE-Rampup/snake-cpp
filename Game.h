@@ -16,7 +16,7 @@ public:
 private:
 	int height = 20 ;
 	int width = 20 ;
-	char **screen;
+	const char **screen;
 	int snakeHead_X;
 	int snakeHead_Y;
 	bool gameover = false;
