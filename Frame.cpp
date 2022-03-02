@@ -10,8 +10,10 @@ void Frame::SetFrame(int height, int width, char **screen){
 			else if(itr_width == 0 || itr_width == width -1){
 				screen[itr_width][itr_height] = symbol_wall ;
 			}
-			else
+			else{
+			// Added this line so that screen[][] dont have any random value.
 				screen[itr_width][itr_height] = symbol_empty ;
+			}
 		}
 	}
 }
