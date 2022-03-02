@@ -5,8 +5,8 @@
 
 class Food{
 public:
-	void spawn_food(int height, int width, char **screen);
-	bool food_eaten(int snakeHead_X, int snakeHead_Y);	
+	void SpawnFood(int height, int width, char **screen);
+	bool FoodEaten(int snakeHead_X, int snakeHead_Y);	
 private:
 	int position_foodX;
 	int position_foodY;

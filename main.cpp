@@ -6,11 +6,11 @@
 
 int main(){
 	Game start;
-	while( start.get_gameover() == false ){
-		start.draw();
+	while( start.GetGameover() == false ){
+		start.Draw();
 		usleep(_5sec);
 	}
-	printf(".....GAMEOVER.....\n\nYour Score is %d", start.get_score());	
+	printf(".....GAMEOVER.....\n\nYour Score is %d", start.GetScore());	
 	return 0;
 }
 

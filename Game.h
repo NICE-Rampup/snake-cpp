@@ -9,14 +9,14 @@ class Game{
 public:
 	Game();
 	~Game();
-	void draw();
-	bool get_gameover();
-	void increase_score();
-	int get_score();
+	void Draw();
+	bool GetGameover();
+	void IncreaseScore();
+	int GetScore();
 private:
 	int height = 20 ;
 	int width = 20 ;
-	const char **screen;
+	char **screen;
 	int snakeHead_X;
 	int snakeHead_Y;
 	bool gameover = false;

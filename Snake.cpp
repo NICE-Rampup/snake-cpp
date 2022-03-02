@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "Snake.h"
 
-void Snake::set_snakeHead(int height, int width, char **screen){
+void Snake::SetSnakeHead(int height, int width, char **screen){
 	if( direction == STOP ){
 		position_snakeHead_X = width / 2 ;
 		position_snakeHead_Y = height / 2 ;
@@ -9,14 +9,14 @@ void Snake::set_snakeHead(int height, int width, char **screen){
 	screen[position_snakeHead_X][position_snakeHead_Y] = symbol_head ;
 }
 
-void Snake::set_snakeTail(char **screen){
+void Snake::SetSnakeTail(char **screen){
 		position_snakeTail_X = -- position_snakeHead_X ;
 		position_snakeTail_Y = position_snakeHead_Y ;
 		
 		screen[position_snakeTail_X][position_snakeTail_Y] = symbol_tail ;
 }
 
-void Snake::move_snakeHead(int height, int width, char **screen){
+void Snake::MoveSnakeHead(int height, int width, char **screen){
 	previous_positionX = position_snakeHead_X;
 	previous_positionY = position_snakeHead_Y;
 	if( direction == UP ){
@@ -34,7 +34,7 @@ void Snake::move_snakeHead(int height, int width, char **screen){
 	screen[position_snakeHead_X][position_snakeHead_Y] = symbol_head ;
 }
 
-void Snake::move_tail(char **screen){
+void Snake::MoveTail(char **screen){
 	/*Swap positions of snaketail and previous*/
 	position_snakeTail_X = position_snakeTail_X + previous_positionX ;
 	previous_positionX = position_snakeTail_X - previous_positionX ;
@@ -47,14 +47,14 @@ void Snake::move_tail(char **screen){
 	screen[position_snakeTail_X][position_snakeTail_Y] = symbol_tail ;
 }	
 
-int Snake::get_snakeLength(){
+int Snake::GetSnakeLength(){
 	return snake_length;
 }
 
-int Snake::get_snakeHead_X(){
+int Snake::GetSnakeHead_X(){
 	return position_snakeHead_X;
 }
 
-int Snake::get_snakeHead_Y(){
+int Snake::GetSnakeHead_Y(){
 	return position_snakeHead_Y;
 }

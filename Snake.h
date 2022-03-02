@@ -4,13 +4,13 @@
 
 class Snake{
 public:
-	void set_snakeHead(int height, int width, char **screen);
-	void set_snakeTail(char **screen);
-	void move_snakeHead(int height, int width, char **screen);
-	void move_tail(char **screen);
-	int get_snakeLength();
-	int get_snakeHead_X();
-	int get_snakeHead_Y();
+	void SetSnakeHead(int height, int width, char **screen);
+	void SetSnakeTail(char **screen);
+	void MoveSnakeHead(int height, int width, char **screen);
+	void MoveTail(char **screen);
+	int GetSnakeLength();
+	int GetSnakeHead_X();
+	int GetSnakeHead_Y();
 private:
 	int position_snakeHead_X;
 	int position_snakeHead_Y;

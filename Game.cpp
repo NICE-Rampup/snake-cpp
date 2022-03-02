@@ -11,10 +11,10 @@ Game::Game(){
 	Frame frame;
 	Food food;
 	Snake snake;
-	frame.set_frame(height, width, screen);
-	food.spawn_food(height, width, screen);
-	snake.set_snakeHead(height, width, screen);
-	snake.set_snakeTail(screen);
+	frame.SetFrame(height, width, screen);
+	food.SpawnFood(height, width, screen);
+	snake.SetSnakeHead(height, width, screen);
+	snake.SetSnakeTail(screen);
 }
 
 Game::~Game(){
@@ -24,7 +24,7 @@ Game::~Game(){
 	}
 }
 
-void Game::draw(){
+void Game::Draw(){
 	system("clear");
 	for(int itr_height = 0 ; itr_height < height ; itr_height ++){
 		for (int itr_width = 0 ; itr_width < width ; itr_width ++){
@@ -34,14 +34,14 @@ void Game::draw(){
 	}
 }
 
-bool Game::get_gameover(){
+bool Game::GetGameover(){
 	return gameover;
 }
 
-void Game::increase_score(){
+void Game::IncreaseScore(){
 	score += 5;
 }
 
-int Game::get_score(){
+int Game::GetScore(){
 	return score;
 }
